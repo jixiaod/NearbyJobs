@@ -4,9 +4,12 @@
 
 ### 下载 mongo 数据包 
 
+https://github.com/jixiaod/NearbyJobs/blob/master/jobs.tar.gz
+
 ### 导入 mongo 数据
 
 ```
+~# tar zxf jobs.tar.gz
 ~# mongoimport -d jobs -c company --upsert jobs.json   
 ```
 
@@ -20,6 +23,6 @@
 > use jobs
 // 创建索引
 > db.company.createIndex({ "loc": "2d" })
-// 查询附近的工作，自己的坐标可以从[高德开放平台API](http://lbs.amap.com/console/show/picker)获得。
+// 查询附近的工作，自己的坐标可以从[高德开放平台API]获得。
 > db.company.find({"loc":{"$near":[116.673886,39.943799]}},{"short_name":1, "address":1})
 ```
