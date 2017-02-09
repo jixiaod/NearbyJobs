@@ -26,3 +26,5 @@ https://github.com/jixiaod/NearbyJobs/blob/master/jobs.tar.gz
 // 查询附近的工作，自己的坐标可以从[高德开放平台API]获得。
 > db.company.find({"loc":{"$near":[116.673886,39.943799]}},{"short_name":1, "address":1})
 ```
+
+![](https://github.com/jixiaod/NearbyJobs/blob/master/nearby-jobs.png)
